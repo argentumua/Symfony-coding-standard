@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<ruleset name="Symfony">
+  <description>The PSR-2 coding standard adapted to Symfony 1.x for Argentum IT Lab</description>
+
+  <exclude-pattern>*/base/*</exclude-pattern>
+  <exclude-pattern>*/Base*</exclude-pattern>
+  <exclude-pattern>/cache/*</exclude-pattern>
+  <exclude-pattern>/data/*</exclude-pattern>
+  <exclude-pattern>/doc/*</exclude-pattern>
+  <exclude-pattern>/htdocs/*</exclude-pattern>
+  <exclude-pattern>/logs/*</exclude-pattern>
+  <exclude-pattern>/plugins/*</exclude-pattern>
+  <exclude-pattern>/lib/helper/*</exclude-pattern>
+  <exclude-pattern>/lib/sfSocial/*</exclude-pattern>
+  <exclude-pattern>/lib/pheanstalk/*</exclude-pattern>
+  <exclude-pattern>/lib/getid3/*</exclude-pattern>
+  <exclude-pattern>/lib/Neo4j/*</exclude-pattern>
+  <exclude-pattern>/lib/NameCaseLib/*</exclude-pattern>
+  <exclude-pattern>/lib/mailchimp/*</exclude-pattern>
+  <exclude-pattern>/lib/mailparse/*</exclude-pattern>
+  <exclude-pattern>/lib/Memcached.php</exclude-pattern>
+  <exclude-pattern>/lib/model/*/map/*</exclude-pattern>
+  <exclude-pattern>*TableMap.php</exclude-pattern>
+  <exclude-pattern>/lib/model/migration/*</exclude-pattern>
+  <exclude-pattern>*PropelMigration*</exclude-pattern>
+  <exclude-pattern>/lib/vendor/*</exclude-pattern>
+  <exclude-pattern>*/sphinxapi.php</exclude-pattern>
+  <exclude-pattern>*/AbstractHeader.php</exclude-pattern>
+  <exclude-pattern>*.css</exclude-pattern>
+  <exclude-pattern>*.js</exclude-pattern>
+
+  <rule ref="PSR2">
+    <!-- no class CamelCaps name -->
+    <exclude name="Squiz.Classes.ValidClassName"/>
+    <!-- braces on separate line -->
+    <exclude name="Squiz.ControlStructures.ControlSignature"/>
+    <!-- indent in multiline functions -->
+    <exclude name="Squiz.Functions.MultiLineFunctionDeclaration"/>
+  </rule>
+
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+
+  <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+    <severity>0</severity>
+  </rule>
+
+  <rule ref="Symfony.ControlStructures.ControlSignature">
+    <properties>
+      <property name="ignoreComments" value="true"/>
+    </properties>
+  </rule>
+
+  <rule ref="PEAR.Functions.FunctionCallSignature">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <rule ref="PEAR.Functions.FunctionCallSignature.MultipleArguments">
+    <severity>0</severity>
+  </rule>
+
+  <rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
+    <severity>0</severity>
+  </rule>
+
+  <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+    <severity>0</severity>
+  </rule>
+
+  <rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterCloseBracket">
+    <exclude-pattern>*Test.php</exclude-pattern>
+  </rule>
+
+  <rule ref="PSR2.ControlStructures.SwitchDeclaration">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+  <rule ref="PSR2.ControlStructures.SwitchDeclaration.SpaceBetweenCase">
+    <severity>0</severity>
+  </rule>
+
+  <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+    <exclude-pattern>/apps/cpanel/modules/*/actions/*</exclude-pattern>
+    <exclude-pattern>*Configuration.class.php</exclude-pattern>
+  </rule>
+
+  <rule ref="Internal.NoCodeFound">
+    <exclude-pattern>/config/*</exclude-pattern>
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+
+  <rule ref="Symfony.Formatting.BlankLineBeforeReturn"/>
+  <rule ref="Symfony.Functions.MultiLineFunctionDeclaration"/>
+
+  <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+
+  <rule ref="Squiz.Classes.LowercaseClassKeywords"/>
+  <rule ref="Squiz.Classes.SelfMemberReference"/>
+
+  <rule ref="Squiz.CodeAnalysis.EmptyStatement"/>
+
+  <rule ref="Squiz.Commenting.ClassComment"/>
+  <rule ref="Squiz.Commenting.ClassComment.Missing">
+    <exclude-pattern>*Configuration.class.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.Commenting.ClassComment.ShortNotCapital">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.ClassComment.ShortFullStop">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.ClassComment.SpacingBefore">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.ClassComment.SpacingBetween">
+    <exclude-pattern>/lib/model/*</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.Commenting.ClassComment.TagNotAllowed">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.DocCommentAlignment"/>
+  <rule ref="Squiz.Commenting.FunctionComment"/>
+  <rule ref="Squiz.Commenting.FunctionComment.EmptyThrows">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.IncorrectParamVarName">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.InvalidReturn">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.Missing">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.MissingParamComment">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.MissingReturn">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.ParamCommentFullStop">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.ParameterCommentsNotAligned">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.ParameterNamesNotAligned">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.ReturnIndent">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.SeeIndent">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.ShortFullStop">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.SpacingAfterLongName">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.SpacingAfterLongType">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.SpacingAfterParams">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.SpacingBeforeParamType">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.ThrowsNoFullStop">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.TypeHintMissing">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionComment.WrongEnd">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>
+  <rule ref="Squiz.Commenting.InlineComment"/>
+  <rule ref="Squiz.Commenting.InlineComment.DocBlock">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.InlineComment.InvalidEndChar">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.InlineComment.NotCapital">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.PostStatementComment"/>
+  <rule ref="Squiz.Commenting.VariableComment"/>
+  <rule ref="Squiz.Commenting.VariableComment.Missing">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.VariableComment.MissingShort">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Commenting.VariableComment.SpacingBeforeTags">
+    <severity>0</severity>
+  </rule>
+
+  <rule ref="Squiz.Functions.FunctionDuplicateArgument"/>
+  <rule ref="Squiz.Functions.GlobalFunction"/>
+
+  <rule ref="Squiz.Scope.StaticThisUsage"/>
+
+  <rule ref="Squiz.Strings.EchoedStrings"/>
+
+  <rule ref="Squiz.WhiteSpace.CastSpacing"/>
+  <rule ref="Squiz.WhiteSpace.ControlStructureSpacing"/>
+  <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.NoLineAfterClose">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
+  <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
+  <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
+  <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+  <rule ref="Squiz.WhiteSpace.OperatorSpacing.SpacingBefore">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.OperatorSpacing.SpacingAfter">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.ScopeClosingBrace"/>
+  <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
+  <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
+  <rule ref="Squiz.WhiteSpace.SemicolonSpacing.Incorrect">
+    <exclude-pattern>*Test.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
+
+  <!-- templates -->
+
+  <rule ref="Zend.Files.ClosingTag.NotAllowed">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+  <rule ref="Generic.Files.LineLength.TooLong">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeOpen">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterClose">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+  <rule ref="Generic.ControlStructures.InlineControlStructure.NotAllowed">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+  <rule ref="Generic.Formatting.DisallowMultipleStatements.SameLine">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.Commenting.InlineComment.NoSpaceBefore">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.Commenting.PostStatementComment.Found">
+    <exclude-pattern>*/templates/*</exclude-pattern>
+    <exclude-pattern>*Success.php</exclude-pattern>
+    <exclude-pattern>*Error.php</exclude-pattern>
+    <exclude-pattern>*/_*.php</exclude-pattern>
+  </rule>
+</ruleset>
