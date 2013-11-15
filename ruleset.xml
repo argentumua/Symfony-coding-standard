@@ -58,25 +58,25 @@
     </properties>
   </rule>
 
-  <rule ref="PEAR.Functions.FunctionCallSignature">
+  <rule ref="PSR2.Methods.FunctionCallSignature">
     <properties>
       <property name="indent" value="2" />
     </properties>
   </rule>
 
-  <rule ref="PEAR.Functions.FunctionCallSignature.MultipleArguments">
+  <rule ref="PSR2.Methods.FunctionCallSignature.MultipleArguments">
     <severity>0</severity>
   </rule>
 
-  <rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
+  <rule ref="PSR2.Methods.FunctionCallSignature.ContentAfterOpenBracket">
     <severity>0</severity>
   </rule>
 
-  <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+  <rule ref="PSR2.Methods.FunctionCallSignature.CloseBracketLine">
     <severity>0</severity>
   </rule>
 
-  <rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterCloseBracket">
+  <rule ref="PSR2.Methods.FunctionCallSignature.SpaceAfterCloseBracket">
     <exclude-pattern>*Test.php</exclude-pattern>
   </rule>
 
